@@ -324,4 +324,37 @@ div.form-floating {
         justify-content: center;
     }
 }
+/* Footer mobile View */
+@media screen and (max-width: 610px){
+    .copyRight{
+        font-size: 12px;
+    }
+    .footerLogo {
+        font-size: 40px;
+    }
+}
+/* Footer mobile View */
 /* FOOTER */
+
+@media screen and (max-width:523px) {
+    .cardDisplayInnerBorder{
+        width: 100%;
+    }
+    .cardBody{
+        width: 100%;
+    }
+    div.box.card {
+        width: 100% !important;
+        
+    }
+    img.card-img-top {
+        width: 100%;
+        height:350px !important;
+    }
+    div.card-body {
+        width:100%
+    }
+    form.searchForm {
+        float: center;
+    }
+}

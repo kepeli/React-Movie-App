@@ -10,10 +10,10 @@ import { Link, useSearchParams } from 'react-router-dom';
 function SearchModal({data}) {
   return (
     <>
-      <section style={{position: 'absolute', top: '45px', width: '190px', color:"black", height:"100px"}}>
-        <div style={{backgroundColor: "white", height:"150px"}}>
+      <section style={{position: 'absolute', top: '35px', width: '190px', color:"black", height:"100px"}}>
+        <div style={{backgroundColor: "white",  height:"300px", overflowY:"scroll"}}>
           <div>
-          {data.tv_shows.map(show => <div key={show.id}><Link style={{display:"flex", flexWrap:"wrap"}}  to={`/details/${show.id}`} key={show.id}><span><img style={{width:"30px"}} src={show.image_thumbnail_path} alt="" /></span><span style={{color:"black", whiteSpace:"nowrap", width: "150px", overflow: 'hidden', textOverflow:"ellipsis", }}>{show.name}</span></Link></div>)}
+          {data.tv_shows.map(show => <div key={show.id}><Link style={{display:"flex", alignItems:"center"}}  to={`/details/${show.id}`} key={show.id}><span><img style={{width:"30px"}} src={show.image_thumbnail_path} alt="" /></span><span style={{color:"black",fontSize:"12px", whiteSpace:"nowrap", width: "150px", overflow: 'hidden', textOverflow:"ellipsis", }}>{show.name}</span></Link></div>)}
             {/* <img src=''/> */}
           </div>
           <div>
@@ -30,6 +30,7 @@ export function SearchBox() {
   const [search, setSearch] = useState("")
   const [fetching, setFetching] = useState(true)
   const [data, setData] = useState(null)
+  const [focus, setFocus] = useState(false)
 
   // console.log(data);
 
@@ -43,14 +44,19 @@ export function SearchBox() {
     .then(finalData => {
       setData(finalData)
       setFetching(false)
+      // setFocus(true)
     })
 
   }
 
+  function leaveFocus() {
+    setFocus(false)
+  }
+
   return (
     <>
-      <input onChange={handleOnChange} type="text" placeholder='Search'/>
-      {search == "" ? null : (!fetching && <SearchModal data={data} />)}
+      <input onFocus={() => setFocus(true)} onBlur={leaveFocus} onChange={handleOnChange} type="text" placeholder='Search'/>
+      {search == "" ? null : (!fetching && focus && <SearchModal data={data} />)}
     
     </>
   )
@@ -105,13 +111,13 @@ export default function NavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
                 Something else here
-              </NavDropdown.Item>
+              </NavDropdown.Item>x
             </NavDropdown> */}
             <Nav.Link href="#" disabled>
               
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex" style={{position: 'relative'}}>
             {/* <Form.Control
               type="search"
               placeholder="Search"

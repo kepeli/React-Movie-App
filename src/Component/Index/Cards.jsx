@@ -80,7 +80,7 @@ export default function Cards({ data, setData, search, setSearch }) {
             {/* <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search'/> */}
             <div className='cardDisplay'>
                 <div className='cardDisplayBorder'>
-                    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                    <div className='cardDisplayInnerBorder' style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
 
                         {
                             !fetching && data.tv_shows.filter((movieData) => {
