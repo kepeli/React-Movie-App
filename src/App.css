@@ -1,0 +1,327 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-true {
+    background-color: rgba(0, 0, 0, 0.884);
+    padding: 0;
+    /* position:absolute; */
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+span.navbar-toggler-icon {
+    /* background-color:#800000; */
+
+}
+.navbar-toggler:hover {
+    background-color:#800000;
+}
+
+
+button.logInBtn.btn.btn-primary,
+button.signUpBtn.btn.btn-primary {
+    background-color: transparent;
+    border: none;
+}
+
+button.logInBtn.btn.btn-primary:hover,
+button.signUpBtn.btn.btn-primary:hover {
+    background-color: white;
+    color: black;
+}
+
+@font-face {
+    font-family: Tesla;
+    src: url(../TESLA.ttf);
+}
+
+.navContainer {
+    background-image: url(../Images/game-of-thrones-1-1920x1080.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+div.container-fluid {
+    padding: 0 50px 0 50px;
+}
+
+a.navbar-brand {
+    color: #800000;
+    font-family: Tesla;
+    font-size: 30px;
+}
+
+a.navbar-brand:hover {
+    color: #990000
+}
+
+.movies {
+    /* display: flex; */
+    position: sticky;
+    top: 80%;
+    color: white;
+    padding-left: 50px;
+}
+.loginName{
+    /* text-decoration:underline; */
+    color: white;
+    margin-left: 15px;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* CARD */
+.cardDisplay {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+.cardDisplayBorder {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.cardBody {
+    margin-bottom: 10px;
+}
+
+.movieTitle {
+    font-size: 15px;
+    font-family: fantasy;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color:#800000e3;
+}
+
+p.card-text {
+    margin: 0;
+    font-size: 12px;
+}
+/* CARD */
+
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* float: right; */
+    /* margin-right: 3%; */
+
+}
+.pageButtons {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightButton, .leftButton {
+    background-color: #800000;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.rightButton:hover, .leftButton:hover {
+    color: #800000;
+}
+
+/* BUTTONS */
+
+
+
+
+/* MOVIE DETAILS */
+div.col-md-7.col-12 {
+    padding: 0;
+}
+div.col-md-3.col-6 {
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+/* div.col-md-6{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+div.col-3 {
+    padding:0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+} */
+.movieName {
+    width: 100%;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    background: rgb(8, 8, 8);
+    padding-left: 25px;
+    margin: 0;
+    /* background: linear-gradient(106deg, rgba(8, 8, 8, 1) 0%, rgba(91, 3, 10, 1) 48%, rgba(255, 255, 255, 1) 66%, rgba(252, 254, 255, 1) 100%); */
+    /* transform:skew(-20deg); */
+}
+.nextEpisodeAirDate {
+    /* transform: skew(20deg); */
+    background-color: #800000;
+    color: white;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieBodyCenter {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.movieBody {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    text-align: justify;
+    /* align-items: center; */
+}
+
+.movieDescription {
+    margin-left: 30px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .movieBody{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    div._2ILZE._3q7r8 {
+        width: 100% !important;
+    }
+    .movieDescription{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+/* MOVIE DETAILS */
+
+
+/* LOGIN */
+.loginPage{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/Henry_Cavill_Batman_v_Superman-Movie_High_Quality_Wallpaper_1366x768.jpg);
+}
+.loginPageBorder{
+    /* background-color: #3e3d43;
+    color: white; */
+    /* border: 1px solid silver; */
+    width: 500px;
+
+}
+.loginHeader{
+    background-color: #3e3d4383;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 30px; */
+}
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    
+    
+}
+.loginInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 40px;
+}
+.form-floating>.form-control {
+    width: 80%;
+}
+div.mb-3.form-floating {
+    width: 80%;
+    
+}
+input#floatingPassword.form-control{
+    width: 100%;
+    /* height: 40px; */
+    padding: 0px;
+    
+}
+input#floatingInput.form-control{
+    width: 100%;
+}
+div.form-floating {
+    width: 80%;
+}
+.loginButton {
+    width: 80%;
+    margin-top: 30px;
+    background-color: #990000;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.wrongDetails{
+    color: #990000;
+}
+/* LOGIN */
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.884);
+    height: 150px;
+    margin-top: 30px;
+}
+.innerFooter{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 60%;
+}
+.footerLogo {
+    font-family: Tesla;
+    color: #800000;
+    font-size: 50px;
+}
+.smallFooterLogoName {
+    font-family: Tesla;
+    color: #800000;
+}
+.copyRight{
+    color: white;
+}
+@media screen and (max-width: 800px) {
+    .innerFooter {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/* FOOTER */
